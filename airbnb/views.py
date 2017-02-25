@@ -16,7 +16,7 @@ def get_city(request):
 			print(CITY)
 			#return HttpResponseRedirect('/airbnb/heatmap')
 			form = CityForm()
-			return render(request, 'airbnb/heatmap.html', {'allListings': Listing.objects.filter(city=CITY), 'form': form})
+			return render(request, 'airbnb/heatmap.html', {'allListings': Listing.objects.filter(city=CITY), 'form': form, 'city': CITY})
 	else:
 		form = CityForm()
 		return render(request, 'airbnb/project.html', {'form': form})	
