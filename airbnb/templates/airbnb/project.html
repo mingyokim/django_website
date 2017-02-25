@@ -1,0 +1,19 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<h1>Visualize AirBnB</h1>
+<h4>Choose the city for which you wish to view a heatmap of all AirBnB listings</h4>
+<br>
+<form action="airbnb" method="POST">
+	{% csrf_token %}
+	{% for c in form.city %}
+		<div>{{ c }}</div>
+	{% endfor %}
+	<br>
+	<input type="submit" value="Submit"/>
+</form>
+
+{% block heatmap %}
+{% endblock %}
+
+{% endblock %}
