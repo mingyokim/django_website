@@ -22,12 +22,13 @@
 
 		//var list = {{ allListings }}
 		//for listing in list {
-		for {{ listing }} in {{allListings}} {
+		//for {{ listing }} in {{allListings}} {
+		{% for li in allListings %}
 			var latitude = {{ listing.lat }};
 			var longitude = {{ listing.long }};
 			var obj = new google.maps.LatLng(latitude, longitude);
 			heatMapData.push(obj);
-		}
+		{% endfor %}
 
 		var heatmap = new google.maps.visualization.HeatmapLayer({
 			data: heatMapData,
