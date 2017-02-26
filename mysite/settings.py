@@ -25,7 +25,7 @@ SECRET_KEY = 'xx81$e1hsu@884&7ys#6l@-b*v^#e(#)x#u$of0a$0m=@tcu!i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','stark-oasis-78263.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','mingyokim.herokuapp.com']
 
 
 # Application definition
