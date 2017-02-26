@@ -6,7 +6,7 @@
 <br>
 <form action="airbnb" method="POST">
 	{% csrf_token %}
-	{% for c in form.city %}<div style="display: inline-block;" class="col-md-2">{{ c }}</div>{% endfor %}
+	{% for c in form.city %}<div style="display: inline-block;" class="col-md-3">{{ c }}</div>{% endfor %}
 	<br>
 	<input type="submit" value="Submit"/>
 </form>
