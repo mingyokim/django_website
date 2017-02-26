@@ -1,5 +1,5 @@
 from django import forms
-from models import Listing
+from .models import Listing
 
 CITY_CHOICES = [('New York City', 'New York City'), ('Paris', 'Paris'), ('Amsterdam', 'Amsterdam')]
 
