@@ -20,14 +20,7 @@
 					new google.maps.LatLng(request.results[0].geometry.bounds.southwest.lat, request.results[0].geometry.bounds.southwest.lng),
 					new google.maps.LatLng(request.results[0].geometry.bounds.northeast.lat, request.results[0].geometry.bounds.northeast.lng)));
 				var heatMapData = [];
-
-				{% for li in allListings %}
-					var latitude = {{ li.lat }};
-					var longitude = {{ li.long }};
-					var obj = new google.maps.LatLng(latitude, longitude);
-					heatMapData.push(obj);
-				{% endfor %}
-
+				{% for li in allListings %}heatMapData.push(new google.maps.LatLng({{ li.lat }}, {{ li.long}}));{% endfor %}
 				var heatmap = new google.maps.visualization.HeatmapLayer({
 					data: heatMapData,
 					radius: 10,
