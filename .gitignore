@@ -2,3 +2,5 @@ venv
 *.pyc
 staticfiles
 .env
+mysite/settings.py
+mysite/settings.pyc
